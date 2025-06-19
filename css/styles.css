@@ -347,20 +347,19 @@ letter-spacing: 0.02em;
                                     margin-bottom: 8px;               }
                                 }
 
-/* team */
+/*==========TEAM==========*/
 
 .team {
     background-color: #f4f4fd;
     text-transform: capitalize;
-    padding: 120px 0;
+    /* padding: 120px 0; */
+    padding: 96px 0;
 }
 
 .team .team-title {
     margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
-
-    /* line-height: 40px; */
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
@@ -369,12 +368,16 @@ letter-spacing: 0.02em;
 
 .team-list {
     display: flex;
-    gap: 24px;
+    /* mobile direction */
+    flex-wrap:wrap;
+    /* gap: 24px; */
+    gap: 72px;
+    padding: 0 12px;
 }
 
 .team .team-member {
     background-color: #FFFFFF;
-    width: calc((100% - 72px) / 4);
+    /* width: calc((100% - 72px) / 4); */
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
@@ -422,8 +425,6 @@ letter-spacing: 0.02em;
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
-
-    /* line-height: 24px; */
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-align: center;
@@ -432,15 +433,42 @@ letter-spacing: 0.02em;
 
 .team .team-dscr {
     font-size: 16px;
-
-    /* line-height: 24px; */
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
 }
 
-/* portfolio */
+/* =====Tablet===== */
+
+@media screen and (min-width: 768px) {
+    .team-list {
+            gap: 64px 24px;
+            padding: 0 92px;   }
+                        .team .team-member {
+                        width: calc((100% - 24px) / 2);
+                        }
+}
+
+/* =====Desktop===== */
+
+@media screen and (min-width: 1158px) {
+    .team {
+        padding: 120px 0;
+    }
+
+    .team-list {
+         display: flex;
+        flex-wrap: nowrap;
+        gap: 24px; 
+    padding: 0; }
+
+    .team .team-member {
+    width: calc((100% - 72px) / 4);
+    }
+}
+
+/* portfolio */ 
 
 .portfolio {
     padding: 120px 0;
