@@ -228,7 +228,7 @@ img {
 
 }
 
-/* about */
+/* ==========ABOUT========== */
 
 .about {
     /* padding: 120px 0; */
@@ -294,6 +294,58 @@ letter-spacing: 0.02em;
     border: 1px solid #8e8f99;
     margin-bottom: 8px;
 }
+
+/* =====Tablet===== */
+
+@media screen and (min-width: 768px) {
+    .list-about {
+            gap: 72px 24px;   }
+
+    .list-about-name {
+                            width: calc((100% - 24px) / 2);           }
+    .about .title-about {
+        text-align: left;
+                                     }                                                         
+                        }
+
+/* =====Desktop===== */
+
+@media screen and (min-width: 1158px) {
+
+    .about {
+        padding: 120px 0;}
+    .list-about {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: auto;
+        gap: 24px;
+    }
+    .list-about-name {
+        width: calc((100% - 72px) / 4);
+                                   }
+    .about .title-about {
+
+        margin-bottom: 8px;
+         font-weight: 500;
+         font-size: 20px;
+         line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;                                   }
+                .about .dscr-about {
+                    /* mobile font weight */
+                    font-weight: 400;
+                }
+                                .icon-box {
+                                
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    height: 112px;
+                                    background-color: #f4f4fd;
+                                    border-radius: 4px;
+                                    border: 1px solid #8e8f99;
+                                    margin-bottom: 8px;               }
+                                }
 
 /* team */
 
