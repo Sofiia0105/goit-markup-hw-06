@@ -36,6 +36,10 @@ img {
     
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
     max-width: 320px;
     width: 100%;
@@ -86,22 +90,9 @@ img {
 .nav-list {
     /* display: flex; */
     display: none;
-    align-items: center;
-    gap: 40px;
 }
 
 
-.nav-link-dash::after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 4px;
-    background-color: #404bbf;
-    border-radius: 2px;
-
-}
 
 .logo {
     font-family: "Raleway", sans-serif;
@@ -139,8 +130,35 @@ img {
     fill: #2f2f37;
 }
 
+.contacts {
+    display: none;
+}
 
-.nav-link {
+
+@media screen and (min-width: 768px) {
+
+    .burger-btn {
+        display: none;
+    }
+
+    .contacts {
+        display: block;
+        font-style: normal;
+        margin-left: auto;   
+        }
+
+    .header-logo {
+        padding: 24px 0;
+        margin-right: 120px;           
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .nav-link {
     display: block;
     padding: 24px 0;
     font-weight: 500;
@@ -161,33 +179,63 @@ img {
     color: #404bbf;
 }
 
-.contacts {
-    display: none;
-    font-style: normal;
-    margin-left: auto;
+
+.nav-link-dash::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+
 }
 
 .contacts-list {
     display: flex;
-
-    align-items: center;
-    gap: 40px;
+    flex-direction: column;
+    gap: 12px;
+    /* align-items: center;
+    gap: 40px; */
 }
 
 .contact-link {
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 24px 0;
+    /* padding: 24px 0; */
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    /* font-size: 16px; */
+    font-size: 12px;
+    /* line-height: 1.5; */
+    line-height: 1.17;
+    /* letter-spacing: 0.02em; */
+    letter-spacing: 0.04em;
     color: #434455;
 }
 
 .contact-link:hover,
 .contact-link:focus {
     color: #404bbf
+}
+}
+
+@media screen and (min-width: 1158px) {
+
+.header-logo {
+    margin-right: 76px;
+}
+
+.contacts-list {
+    flex-direction: row;
+    gap: 40px;
+}
+
+.contact-link {
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 /*==========HERO==========*/
@@ -203,6 +251,7 @@ img {
     background-size: cover;
     /* padding: 188px 0; */
     padding: 72px 0;
+    max-width: 320px;
     width: 100%;
     margin: 0 auto;
 }
