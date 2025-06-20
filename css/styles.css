@@ -257,9 +257,9 @@ img {
     gap: 72px;
 }
 
-.list-about-name {
-    /* width: calc((100% - 72px) / 4); */
-}
+/* .list-about-name {
+    width: calc((100% - 72px) / 4);
+} */
 
 .about .title-about {
 font-weight: 700;
@@ -809,7 +809,7 @@ letter-spacing: 0.02em;
 
 @media screen and (min-width: 1158px) {
 
-    .page-footer {;
+    .page-footer {
             padding: 100px 0;
         }
 
@@ -838,12 +838,12 @@ letter-spacing: 0.02em;
     }
 }
 
-/* modal */
+/*==========MODAL==========*/
 
 .backdrop {
     position: fixed;
     top: 0;
-    left: 0;
+    /* left: 0; */
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
@@ -863,14 +863,17 @@ letter-spacing: 0.02em;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 408px;
-    min-height: 584px;
+    /* width: 408px; */
+    width: 288px;
+    /* min-height: 584px; */
+    min-height: 623px;
     border-radius: 4px;
     transform: translate(-50%, -50%);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 24px 24px;
+    /* padding: 72px 24px 24px 24px; */
+    padding: 72px 16px 24px 16px;
 }
 
 .backdrop:not(is-open) .modal {
@@ -892,7 +895,10 @@ letter-spacing: 0.02em;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* mobile */
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
+
 
 .modal-close:hover {
     background-color: #404bbf;
@@ -925,9 +931,12 @@ letter-spacing: 0.02em;
     margin-bottom: 16px;
 }
 
-.input-wrapper,
-.textarea-wrapper {
+.input-wrapper {
     margin-bottom: 8px;
+}
+
+.textarea-wrapper {
+    margin-bottom: 16px;
 }
 
 .form-label {
@@ -949,13 +958,18 @@ letter-spacing: 0.02em;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
-    padding-left: 38px;
+    /* padding-left: 38px; */
+    padding-left: 34px;
     outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-field:focus {
     border-color: #4d5ae5;
+}
+ 
+.input-field::placeholder {
+    color: rgba(46, 47, 66, 0.4)
 }
 
 .input-icon {
@@ -986,11 +1000,11 @@ letter-spacing: 0.02em;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: rgba(46, 47, 66, 0.4);
     outline: transparent;
+    font-weight: 400;
 }
 
 .textarea:focus {
     border-color: #4d5ae5;
-    outline: none;
 }
 
 .textarea-wrapper {
@@ -1015,12 +1029,13 @@ letter-spacing: 0.02em;
 }
 
 .checkbox-label {
+    /* display: flex; */
     font-size: 12px;
     line-height: 1.17;
     color: #8e8f99;
     letter-spacing: 0.04em;
     align-items: center;
-    gap: 8px;
+    /* gap: 8px; */
 }
 
 .custom-checkbox {
@@ -1035,6 +1050,7 @@ letter-spacing: 0.02em;
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
+    flex-shrink: 0;
 }
 
 .checkbox-input:checked+.checkbox-label .custom-checkbox {
@@ -1047,6 +1063,8 @@ letter-spacing: 0.02em;
 .privacy-link {
     color: #4d5ae5;
     text-decoration: underline;
+    line-height: 1.33;
+    text-decoration-skip-ink: none;
 }
 
 .submit-btn {
@@ -1058,6 +1076,7 @@ letter-spacing: 0.02em;
     border-radius: 4px;
     background-color: #4d5ae5;
     color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -1070,5 +1089,25 @@ letter-spacing: 0.02em;
 .submit-btn:hover,
 .submit-btn:focus {
     background-color: #404bbf;
-    fill: #ffffff;
+    /* fill: #ffffff; */
+}
+
+/* =====Tablet===== */
+
+@media screen and (min-width: 768px) {
+
+    .modal {
+            width: 408px;
+            min-height: 584px;
+            padding: 72px 24px 24px 24px;
+        }
+}
+
+/* =====Desktop===== */
+
+@media screen and (min-width: 1158px) {
+
+    .input-field {
+            padding-left: 38px;
+}
 }
