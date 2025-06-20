@@ -27,10 +27,13 @@ p {
     margin: 0;
 }
 
-/* common */
+/*===========COMMON==========*/
 
 img {
-    display: block
+    display: block;
+    width: 100%;
+    height: auto;
+    
 }
 
 .container {
@@ -58,7 +61,7 @@ img {
     
 }
 
-/* header */
+/*==========HEADER==========*/
 
 .page-header {
     border-bottom: 1px solid #e7e9fc;
@@ -70,6 +73,7 @@ img {
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-nav {
@@ -80,7 +84,8 @@ img {
 }
 
 .nav-list {
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     gap: 40px;
 }
@@ -109,8 +114,9 @@ img {
 }
 
 .header-logo {
-    padding: 24px 0;
-    margin-right: 76px;
+    /* padding: 24px 0; */
+    padding: 16px 0;
+    /* margin-right: 76px; */
 }
 
 .header-logo .logo-part {
@@ -121,6 +127,18 @@ img {
     color: #f4f4fd;
 
 }
+
+.burger-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.burger-icon {
+    display: block;
+    fill: #2f2f37;
+}
+
 
 .nav-link {
     display: block;
@@ -144,12 +162,14 @@ img {
 }
 
 .contacts {
+    display: none;
     font-style: normal;
     margin-left: auto;
 }
 
 .contacts-list {
     display: flex;
+
     align-items: center;
     gap: 40px;
 }
@@ -170,7 +190,7 @@ img {
     color: #404bbf
 }
 
-/* hero */
+/*==========HERO==========*/
 
 .hero {
     background-color: #2e2f42;
@@ -306,9 +326,6 @@ img {
                 .main-title {
                     margin-bottom: 48px;    
                 }
-
-
-
 }  
 
 
